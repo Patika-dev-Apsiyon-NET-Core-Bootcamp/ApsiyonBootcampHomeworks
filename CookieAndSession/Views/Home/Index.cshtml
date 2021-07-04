@@ -1,0 +1,13 @@
+﻿
+
+
+
+<div id="showmodal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            @await Component.InvokeAsync("AddBook")
+        </div>
+    </div>
+</div>
+@Html.ActionLink("Kitap Ekle", "Add", "Home", null, new { id = "open", data_toggle = "modal", data_target = "#showmodal", @class = "btn btn-primary" })
+@await Component.InvokeAsync("GetBookList")
